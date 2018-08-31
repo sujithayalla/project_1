@@ -20,8 +20,8 @@
 		<nav class="navbar navbar-default">
 		<div class="navbar-header">
 			<a href="" class="navbar-brand"><img
-				src="resources/images/ABC.jpg" alt="ABC" height="50px"
-				width="70px"></a>
+				src="resources/images/niit.jpg" 
+				alt="NIIT" height="50px" width="70px"></a>
 			<button type="button" class="navbar-toggle collapsed"
 				data-toggle="collapse" data-target="#navbardemo"
 				aria-expanded="false">

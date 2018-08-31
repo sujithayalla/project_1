@@ -28,44 +28,7 @@ public String getAllProducts(Model model){
 	//                 attributename   data
 	return "listofproducts";//logical view name
 	//in listofproducts.jsp,access the model attribute "productsList"
-}
-@RequestMapping(value="/all/getproduct/{id}")
-public String getProduct(@PathVariable int id,Model model){
-	Product product=productDao.getProduct(id);
-	model.addAttribute("productObj",product);
-	return "viewproduct";
-}
-@RequestMapping(value="/admin/deleteproduct/{id}")
-public String deleteProduct(@PathVariable int id,Model model){
-	productDao.deleteProduct(id);
-	return "redirect:/all/getallproducts";
-}
-@RequestMapping(value="/admin/getproductform")
-public String getproductform(Model model){
-	Product p=new Product();
-	model.addAttribute("product",p);
-	model.addAttribute("categories",productDao.getAllCategories());
-	//In productform, access  the values of all the properties of product p
-	//in the form, p.getId(),p.getProductname(),p.getPrice(),p.getQuantity(),p.getProductdesc()
-	return "productform";
-}
-@RequestMapping(value="/admin/addproduct")
-public String addProduct(@ModelAttribute(name="product") Product product  ){
-	productDao.saveProduct(product);
-	return "redirect:/all/getallproducts";
-}
-@RequestMapping(value="/admin/getupdateform/{id}")
-public String getUpdateProductForm(@PathVariable int id,Model model){
-	//how to get the product?
-	Product product=productDao.getProduct(id);
-	model.addAttribute("product",product);
-	model.addAttribute("categories",productDao.getAllCategories());
-	return "updateproductform";
-}
-@RequestMapping(value="/admin/updateproduct")
-public String updateProduct(@ModelAttribute Product product){//product will have updated values
-	productDao.updateProduct(product);
-	return "redirect:/all/getallproducts";
+	
 }
 }
 

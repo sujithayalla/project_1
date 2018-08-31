@@ -8,47 +8,35 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	
 	<div class="container">
-		<b>List of Products</b>
-		<table class="table table-striped" border="1">
+	<b>List of Products</b>
+		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>Id</th>
 					<th>Product Name</th>
 					<th>Price</th>
 					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
-				<!-- For each object in the list, tr has to be repeated -->
-				<!--  items refers to the collection of objects -->
-				<!-- var is local variable ,takes objects one by one from the collection -->
-				<c:forEach var="p" items="${productsList }">
-					<tr >
-						<td><a
-							href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.id }</a></td>
-						<td><a
-							href="<c:url value='/all/getproduct/${p.id }'></c:url>">${p.productname }</a></td>
-						<td>${p.price }</td>
-						<td>
-						
-						  <a href="<c:url value='/all/getproduct/${p.id }'></c:url>">
-							<span
-								class="glyphicon glyphicon-info-sign"></span></a> 
-								<a href="<c:url value='/admin/deleteproduct/${p.id }'></c:url>"><span
-								class="glyphicon glyphicon-trash"></span></a> 
-								
-								<a href="<c:url value='/admin/getupdateform/${p.id }'></c:url>"><span
-								class="glyphicon glyphicon-pencil"></span></a></td>
+			<!-- For each object in the list, tr has to be repeated -->
+			<!--  items refers to the collection of objects -->
+			<!-- var is local variable ,takes objects one by one from the collection -->
+			<c:forEach var="p" items="${productsList }" >
+				<tr>
+					<td>${p.productname }</td><td>${p.price }</td>
+					<td>
+					<a href=""><span class="glyphicon glyphicon-info-sign"></span></a>
+					<a href=""><span class="glyphicon glyphicon-trash"></span></a>
+					<a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+					</td>
 
-					</tr>
-				</c:forEach>
+				</tr>
+			</c:forEach>
 			</tbody>
 		</table>
 
 	</div>
 </body>
 </html>
-
-

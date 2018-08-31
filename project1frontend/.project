@@ -3,6 +3,9 @@
 	<name>project1frontend</name>
 	<comment></comment>
 	<projects>
+		<project>project1backend</project>
+		<project>RemoteSystemsTempFiles</project>
+		<project>Servers</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
