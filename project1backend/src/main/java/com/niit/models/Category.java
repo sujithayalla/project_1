@@ -8,16 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
 @Entity
-@Table(name="category")
 public class Category {
-	public List<Product> getProducts() {
-		return products;
-	}
-	public void setProducts(List<Product> products) {
-		this.products = products;
-	}
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
@@ -36,10 +28,11 @@ public String getCategoryname() {
 public void setCategoryname(String categoryname) {
 	this.categoryname = categoryname;
 }
-@Override
-public String toString() {
-	return "Id: " + this.id + " " + "cn: "+this.categoryname; 
+public List<Product> getProducts() {
+	return products;
+}
+public void setProducts(List<Product> products) {
+	this.products = products;
 }
 
 }
-

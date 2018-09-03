@@ -29,7 +29,7 @@ public class ProductDaoImplTest extends TestCase {
 		   //Null or Not null
 		   assertNotNull(product1);
 		   assertNotNull(product3);//product3!=null, if it is true, success
-		   assertNull(product2);//product2==null,if it is true, success
+		   assertNotNull(product2);//product2==null,if it is true, success
 		   
 		   //check for prices [actual price returned is same as expected price for id=3
 		   double expectedPrice=2000;

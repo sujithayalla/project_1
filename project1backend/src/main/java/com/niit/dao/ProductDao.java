@@ -5,8 +5,7 @@ import java.util.List;
 import com.niit.models.Category;
 import com.niit.models.Product;
 
-public interface ProductDao 
-{
+public interface ProductDao {
 Product saveProduct(Product product);//product.id=0, new Object, insert
 Product getProduct(int id);
 
@@ -16,3 +15,4 @@ void deleteProduct(int id);
 List<Product> getAllProducts();//fetch all the records from product table
 List<Category> getAllCategories();
 }
+

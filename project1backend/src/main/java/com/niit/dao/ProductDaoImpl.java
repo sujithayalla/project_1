@@ -19,22 +19,10 @@ public class ProductDaoImpl implements ProductDao {
 @Autowired
 private SessionFactory sessionFactory;	
 
-public List<Product> getAllProducts() {
-	Session session=sessionFactory.getCurrentSession();
-	//from Product -> HQL
-	//Product is class name
-	//from Product -> Select * from Product -> records from product table
-	//record will get converted into product object
-	//product object will get added into a list
-	// List<Product>
-	Query query=session.createQuery("from Product");//Product is an entity 
-	List<Product> products=query.list();
-	return products;
-	
-}
 public ProductDaoImpl(){
 	System.out.println("ProductDaoImpl bean is created");
 }
+
 
     /**
      * Insert product details into a product table using hibernate framework
@@ -71,6 +59,21 @@ public ProductDaoImpl(){
 		
 	}
 
+	public List<Product> getAllProducts() {
+		Session session=sessionFactory.getCurrentSession();
+		//from Product -> HQL
+		//Product is class name
+		//from Product -> Select * from Product -> records from product table
+		//record will get converted into product object
+		//product object will get added into a list
+		// List<Product>
+		Query query=session.createQuery("from Product");//Product is an entity 
+		List<Product> products=query.list();
+		return products;
+		
+	}
+
+
 	public List<Category> getAllCategories() {
 		Session session=sessionFactory.getCurrentSession();
 		Query query=session.createQuery("from Category");
@@ -81,8 +84,4 @@ public ProductDaoImpl(){
 	
 
 }
-
-
-
-
 
