@@ -48,15 +48,18 @@ $(document).ready(function(){
 						<td>${p.category.categoryname }</td>
 						<td>
 						
-						  <a href="<c:url value='/all/getproduct/${p.id }'></c:url>">
+						   <a href="<c:url value='/all/getproduct/${p.id }'></c:url>">
 							<span
 								class="glyphicon glyphicon-info-sign"></span></a> 
+								<security:authorize access="hasRole('ROLE_ADMIN')">
 								<a href="<c:url value='/admin/deleteproduct/${p.id }'></c:url>"><span
 								class="glyphicon glyphicon-trash"></span></a> 
 								
 								<a href="<c:url value='/admin/getupdateform/${p.id }'></c:url>"><span
-								class="glyphicon glyphicon-pencil"></span></a></td>
-
+								class="glyphicon glyphicon-pencil"></span></a>
+								  </security:authorize>
+									</td>
+                              
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -65,4 +68,5 @@ $(document).ready(function(){
 	</div>
 </body>
 </html>
+
 

@@ -28,4 +28,18 @@ public String homePage(HttpSession session){
 public String aboutusPage(){
 	return "aboutus";
 }
+@RequestMapping(value="/login")
+public String login(){
+	return "login";
+}
+@RequestMapping(value="/loginerror")
+public String loginFailed(Model model){
+	model.addAttribute("error","Invalid credentials..");
+	return "login";
+}
+@RequestMapping(value="/logout")
+public String logout(Model model){
+	model.addAttribute("msg","Loggedout successfully...");
+	return "login";
+}
 }
