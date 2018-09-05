@@ -1,5 +1,6 @@
 package com.niit.dao;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.models.Authorities;
 import com.niit.models.Customer;
+import com.niit.models.User;
 @Repository
 @Transactional
 public class CustomerDaoImpl implements CustomerDao {
@@ -34,6 +36,17 @@ private SessionFactory sessionFactory;
 	   session.save(customer);
 	   //has to insert into customer table
 	}
+	public boolean isEmailUnique(String email) {
+		Session session=sessionFactory.getCurrentSession();
+		User user=(User)session.get(User.class, email);
+		if(user==null)//email is unique
+			return true;
+			else
+				return false;//email is not unique.
+	}
 
 }
+
+
+
 
