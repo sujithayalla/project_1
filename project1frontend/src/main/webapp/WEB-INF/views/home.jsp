@@ -19,20 +19,20 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img class="img-circle" src="resources/images/acuransx.jpg" alt="first slide" height="100%" width="100%">
+                    <img class="img-circle" src="resources/images/electronics world.jpg" alt="first slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>WELCOME TO THE CAR STORE</h1>
-                            <p>Here You Can Browse And Buy Cars.Order Now For Your Amazing New Arrivals</p>
+                            <h1>WELCOME TO THE ELECTRONICS WORLD</h1>
+                            <p>Biringing The World Of Electronics Together</p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img class="img-circle" src="resources/images/hondaamaze.jpg" alt="Second slide" height="100%" width="100%">
+                    <img class="img-circle" src="resources/images/electronics store.jpg" alt="Second slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>The Car Store.</h1>
-                            <p>online shopping can make your life more easier</p>
+                            <h1>The Electronics Store.</h1>
+                            <p>Art of Invisibility</p>
                         </div>
                     </div>
                 </div>
