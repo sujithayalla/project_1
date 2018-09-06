@@ -28,29 +28,29 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img class="img-circle" src="resources/images/electronics store.jpg" alt="Second slide" height="100%" width="100%">
+                    <img class="img-circle" src="resources/images/all in one world.jpg" alt="Second slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>The Electronics Store.</h1>
+                            <h1>ALL IN ONE WORLD</h1>
                             <p>Art of Invisibility</p>
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img  src="resources/images/marutiswift.jpg" alt="Third slide" height="100%" width="100%">
+                    <img class="img-circle" src="resources/images/laptop.jpg" alt="Third slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>The Car You Love</h1>
-                            <p>live Freely,Work Happily And Drive Safely!!</p>
+                            <h1>LOVE YOUR WORK, MAKE TIME RELAX TO SEE THE WORLD</h1>
+                            <p>Invention Breeds Innovation!!</p>
                         </div>
                     </div>
                 </div>
                  <div class="item">
-                    <img class="img-responsive" src="resources/images/toyotacamry.jpg" alt="forth slide" height="100%" width="100%">
+                    <img class="img-circle" src="resources/images/imagination.jpg" alt="forth slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Any car can be a "cool" car</h1>
-                            <p>your life,your car...you own it!!</p>
+                            <h1>MORE U LOVE MORE U CAN BUY</h1>
+                            <p>online shopping can make your life more easier!!</p>
                         </div>
                     </div>
                 </div>
