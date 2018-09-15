@@ -19,13 +19,16 @@ public String getRegistrationForm(Model model){
 	return "registrationform";
 }
 @RequestMapping(value="/all/registercustomer")
-public String registerCustomer(@ModelAttribute(name="customer") Customer customer){
+public String registerCustomer(@ModelAttribute(name="customer") Customer customer,Model model){
 
-	
+	//CHECK if Email is unique
+	if(!customerDao.isEmailUnique(customer.getUser().getEmail())){
+		model.addAttribute("error","Email id already exists.. please choose different email id");
+		return "registrationform";
+	}
 	
 	//Call DAO to persist customer details
 	customerDao.registerCustomer(customer);
 	return "login";
 }
 }
-
